@@ -19,7 +19,7 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('',(req,res) =>{
     res.render('index',{
-        title: 'Still index',
+        title: 'Weather',
         name: 'created by nevin'
 
     })
