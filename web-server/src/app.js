@@ -32,7 +32,6 @@ app.get('/about',(req,res) => {
         name: 'Nevin'
     })
 })
-
 app.get('/help',(req,res) => {
     res.render('help',{
         msg: 'This is the message b',
@@ -49,7 +48,24 @@ app.get('/weather',(req,res)=>{
     })
 })
 
+app.get('/help/*', (req,res) => {
+    res.render('404',{
+        msg: 'help article not found'
+    })
+
+})
+
+
+
+app.get('*',(req,res) => {
+    res.render('404',{
+        msg: 'Page not found'
+    })
+
+})
+
 app.listen(3000, () => {
     console.log('Server is up')
 
 })
+
