@@ -16,7 +16,7 @@ weatherFrom.addEventListener('submit', (e) => {
     messsage1.textContent = 'loading...'
     messsage2.textContent = ' '
 
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 return messsage1.textContent = data.error
